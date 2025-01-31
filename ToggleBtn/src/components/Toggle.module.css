@@ -1,0 +1,38 @@
+.container {
+    cursor: pointer;
+    height: 80px;
+    width: 180px;
+    background-color: rgb(219, 214, 214);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    margin-top: 50%;
+}
+
+.innerContainer {
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(196, 193, 193);
+}
+
+.text {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.on {
+    transform: translateX(95px);
+    background-color: green;
+}
+
+.off {
+    transform: translateX(0px);
+    background-color: red;
+}
