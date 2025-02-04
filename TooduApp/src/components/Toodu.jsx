@@ -24,6 +24,11 @@ const Toodu = () => {
     setInputValue("");
   };
 
+  const handleOnDelete = (value) => {
+    const updateTaskItem = task.filter((item) => item !== value);
+    setTask(updateTaskItem);
+  };
+
   return (
     <div className={style.container}>
       <div className={style.innerContainer}>
@@ -47,13 +52,17 @@ const Toodu = () => {
                 <button className={style.btnCheck}>
                   <FaCheckCircle />
                 </button>
-                <button className={style.btnDelete}>
+                <button
+                  className={style.btnDelete}
+                  onClick={() => handleOnDelete(currElm)}
+                >
                   <MdOutlineDelete />
                 </button>
               </li>
             );
           })}
         </ul>
+        <button onClick={() => setTask([])}>Clear All</button>
       </div>
     </div>
   );
